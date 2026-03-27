@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background: #fdfcfa;
+    color: #1a2e3b;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #c4e2e4; }
+  ::-webkit-scrollbar-thumb { background: #2a8c96; border-radius: 4px; }
+  ::selection { background: #2a8c9625; color: #1a2e3b; }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .font-body    { font-family: 'Lato', sans-serif; }
+  .font-script  { font-family: 'Dancing Script', cursive; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
